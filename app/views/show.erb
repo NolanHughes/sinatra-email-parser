@@ -1,0 +1,8 @@
+<ul>
+  <h1><%= @email.file_name %></h1>
+  <p style="margin-bottom: 1em;">From: <%= @email.from %></p>
+  <p style="margin-bottom: 1em;">To: <%= @email.to %></p>
+  <li style="list-style-type: none; margin-bottom: 1em;">Subject: <%= @email.subject %></li>
+  <hr>
+  <li style="list-style-type: none;"><%= @email.body %></li>
+</ul>

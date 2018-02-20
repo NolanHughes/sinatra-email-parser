@@ -1,0 +1,14 @@
+<h1>Enter your search terms below</h1>
+
+<h3>The search terms must be seperated by a comma and a space. Capitalization does not matter.</h3>
+<h4>Example: 'Albus, Dumbledore, potter, HArry' will return all emails that contain all four of those words.</h4>
+
+<form method="POST" action="/emails/search">
+  <label for="input">Input:</label>
+  <input type="text" id="input" name="input" style="display: block;" />
+
+  <label for="filter" style="display: block;">Filter Out Messages From:</label>
+  <input type="text" id="filter" name="filter" />
+
+  <input type="submit" value="Submit" style="display: block;" />
+</form>

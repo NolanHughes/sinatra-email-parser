@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Emails</title>
+    <link rel="icon" href="/img/email-icon.png">
+  </head>
+  <body>
+
+    <a href="/emails/new">Add emails</a>
+    <br>
+    <a href="/emails/search">Search your emails</a>
+
+    <h1>Emails</h1>
+    <ol>
+      <% @emails.each do |email| %>
+        <li><h3><a href="/emails/<%= email.id %>"><%= email.file_name %></a></h3></li>
+        <!-- <p style="margin-bottom: 1em;">From: <%= email.from %></p>
+        <p style="margin-bottom: 1em;">To: <%= email.to %></p>
+        <p style="margin-bottom: 1em;">Subject: <%= email.subject %></p> -->
+        <!-- <hr> -->
+      <% end %>
+    </ol>
+
+    <h3>Delete all emails?</h3>
+    <form action="/emails/delete" method="POST">
+      <input id="hidden" type="hidden" name="_method" value="delete">
+      <input type="submit" value="delete">
+    </form>
+  </body>
+</html>

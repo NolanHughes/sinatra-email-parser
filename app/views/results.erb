@@ -1,0 +1,13 @@
+<h1>Results Page</h1>
+
+<ul>
+  <% @emails_with_input.each do |email| %>
+    <h3 style="margin-top: 2em;"><%= email.file_name %></h3>
+    <p style="margin-bottom: 1em;">From: <%= email.from %></p>
+    <p style="margin-bottom: 1em;">To: <%= email.to %></p>
+    <li style="list-style-type: none; margin-bottom: 1em;">Subject: <%= email.subject %></li>
+    <!-- <li>Attachment Names: <%= email.attachment_names %></li> -->
+    <li style="list-style-type: none; margin-left: 50px;"><%= email.body %></li>
+    <hr>
+  <% end %>
+</ul>
